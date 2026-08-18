@@ -1,0 +1,282 @@
+{
+  "servers": [
+    {
+      "server": {
+        "name": "awslabs.aws-documentation-mcp-server",
+        "title": "AWS Documentation",
+        "description": "Busqueda y lectura de documentacion oficial de AWS. Sin credenciales.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.aws-documentation-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_DOCUMENTATION_PARTITION", "value": "aws" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "aws-knowledge-mcp-server",
+        "title": "AWS Knowledge",
+        "description": "Conocimiento AWS gestionado (docs, Well-Architected, CDK, Strands). Remoto, sin auth.",
+        "version": "latest",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://knowledge-mcp.global.api.aws"
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.aws-pricing-mcp-server",
+        "title": "AWS Pricing",
+        "description": "Precios AWS en tiempo real y analisis de costos. Requiere permiso IAM pricing:*.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.aws-pricing-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" },
+              { "name": "AWS_REGION", "value": "us-east-1" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.cloudwatch-mcp-server",
+        "title": "Amazon CloudWatch",
+        "description": "Metricas, logs, alarmas y RCA de CloudWatch. Recomendado con rol IAM ReadOnly.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.cloudwatch-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.cloudwatch-applicationsignals-mcp-server",
+        "title": "CloudWatch Application Signals",
+        "description": "APM / Application Signals de CloudWatch. Recomendado con rol IAM ReadOnly.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.cloudwatch-applicationsignals-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.cloudtrail-mcp-server",
+        "title": "AWS CloudTrail",
+        "description": "Consulta de eventos y auditoria de seguridad en CloudTrail. Rol IAM ReadOnly.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.cloudtrail-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.prometheus-mcp-server",
+        "title": "Amazon Managed Prometheus",
+        "description": "Consulta de metricas via Amazon Managed Prometheus (AMP). Rol IAM ReadOnly.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.prometheus-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "strands-agents-mcp-server",
+        "title": "Strands Agents",
+        "description": "Documentacion y herramientas del framework Strands Agents (respaldo del Power Strands).",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "strands-agents-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "INFO" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "context7",
+        "title": "Context7",
+        "description": "Documentacion de codigo actualizada de librerias/frameworks (respaldo del Power cloud-architect).",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@upstash/context7-mcp",
+            "transport": { "type": "stdio" }
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "drawio",
+        "title": "draw.io diagrams",
+        "description": "Genera y edita diagramas draw.io (variante local, datos no salen de la maquina).",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@drawio/mcp",
+            "transport": { "type": "stdio" }
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "filesystem",
+        "title": "Filesystem",
+        "description": "Operaciones de archivo acotadas a un directorio permitido. Ajustar el path permitido.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@modelcontextprotocol/server-filesystem",
+            "transport": { "type": "stdio" },
+            "packageArguments": [
+              { "type": "positional", "value": "${ALLOWED_PATH}" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "aws-mcp",
+        "title": "AWS Agent Toolkit (MCP Server + Proxy)",
+        "description": "Agent Toolkit for AWS: documentacion, skills y ejecucion de APIs. Docs sin credenciales.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcp-proxy-for-aws",
+            "transport": { "type": "stdio" },
+            "packageArguments": [
+              { "type": "positional", "value": "https://aws-mcp.us-east-1.api.aws/mcp" },
+              { "type": "positional", "value": "--metadata" },
+              { "type": "positional", "value": "AWS_REGION=us-east-1" }
+            ],
+            "environmentVariables": [
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" },
+              { "name": "AWS_REGION", "value": "us-east-1" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.aws-serverless-mcp-server",
+        "title": "AWS Serverless / SAM",
+        "description": "Ciclo de vida de SAM y aplicaciones serverless. Read-only por defecto.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.aws-serverless-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" },
+              { "name": "AWS_REGION", "value": "us-east-1" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "awslabs.aws-transform-mcp-server",
+        "title": "AWS Transform",
+        "description": "Migracion y modernizacion con AWS Transform. Requiere credenciales AWS.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "awslabs.aws-transform-mcp-server",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "FASTMCP_LOG_LEVEL", "value": "ERROR" },
+              { "name": "AWS_PROFILE", "value": "${AWS_PROFILE}" },
+              { "name": "AWS_REGION", "value": "us-east-1" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "server": {
+        "name": "chrome-devtools",
+        "title": "Chrome DevTools",
+        "description": "Inspecciona y automatiza un Chrome vivo. Pensado para QA y automatizacion.",
+        "version": "latest",
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "chrome-devtools-mcp",
+            "transport": { "type": "stdio" }
+          }
+        ]
+      }
+    }
+  ]
+}
