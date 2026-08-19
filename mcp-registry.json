@@ -263,6 +263,26 @@
       }
     },
     {
+  "server": {
+    "name": "Atlassian-MCP-Server",
+    "title": "Atlassian MCP Server",
+    "description": "Acceso remoto a Jira/Confluence via mcp-remote con autenticacion OAuth v2.",
+    "version": "latest",
+    "packages": [
+      {
+        "registryType": "npm",
+        "registryBaseUrl": "https://registry.npmjs.org",
+        "identifier": "mcp-remote",
+        "transport": { "type": "stdio" },
+        "packageArguments": [
+          { "type": "positional", "value": "https://mcp.atlassian.com/v1/mcp/authv2" }
+        ]
+      }
+    ]
+  }
+}
+,
+    {
       "server": {
         "name": "chrome-devtools",
         "title": "Chrome DevTools",
