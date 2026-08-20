@@ -298,5 +298,20 @@
         ]
       }
     }
+    ,
+    {
+      "server": {
+        "name": "microsoft-learn",
+        "title": "Microsoft Learn",
+        "description": "Documentacion oficial de Microsoft Learn via MCP. Remoto, sin auth.",
+        "version": "latest",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://learn.microsoft.com/api/mcp"
+          }
+        ]
+      }
+    }
   ]
 }
