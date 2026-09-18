@@ -300,6 +300,23 @@
     }
     ,
     {
+  "server": {
+    "name": "playwright",
+    "title": "Playwright",
+    "description": "Automatizacion de navegador via Playwright MCP oficial (Microsoft). Interaccion por accessibility tree, sin modelos de vision.",
+    "version": "latest",
+    "packages": [
+      {
+        "registryType": "npm",
+        "registryBaseUrl": "https://registry.npmjs.org",
+        "identifier": "@playwright/mcp",
+        "transport": { "type": "stdio" }
+      }
+    ]
+  }
+}
+    ,
+    {
       "server": {
         "name": "microsoft-learn",
         "title": "Microsoft Learn",
