@@ -300,7 +300,7 @@
     }
     ,
     {
-      "server": {        
+      "server": {
         "name": "playwright",
         "title": "Playwright",
         "description": "Automatizacion de navegador via Playwright MCP oficial (Microsoft). Interaccion por accessibility tree, sin modelos de vision.",
